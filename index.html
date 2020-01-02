@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Skweb</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+ <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <style>
+	  *{
+      margin: 0;padding: 0;font-family: 'Roboto', sans-serif;
+    }  
+
+    #nav-bar{
+
+    	position: sticky;
+    	top: 0;
+    	z-index: 10;
+    }
+
+    .navbar{
+
+
+    	background-image: linear-gradient(to right, #a517ba,#5f1782);
+    	padding: 0 !important;
+    }
+    .navbar-brand{
+
+    	height: 40px;
+    	padding-left: 20px;
+    }
+
+    .navbar-nav li{
+    	padding: 0 10px;
+
+    }
+
+    .navbar-nav li a{
+    	color: #fff!important;
+    	font-weight: 600;
+    	float: right;
+    	text-align: center;
+    	 }
+    .fa-bars{
+    	color: #fff;
+    	font-size: 30px!important;
+
+    }
+    .navbar-toggler{
+
+    	outline: none!important;
+    }	 
+    #banner{
+    	background-image: linear-gradient(to right, #a517ba,#5f1782);
+    	color: #fff;
+    	padding-top: 5%;
+
+
+    }
+    .pt{
+
+    	font-size: 40px;
+    	font-weight: 600;
+    	margin-top: 100px;
+    }
+    .bimg{
+
+    	width: 100%;
+
+    }
+    #services{
+
+    	padding: 80px 0;
+    }
+    .simg{
+
+    	width:200px;
+    	height: 100px;
+    	margin-top: 20px;
+    }
+    .services{
+    	padding:20px;
+    }
+    .services h4{
+
+    	padding: 5px;
+    	margin-top: 25px;
+    	text-transform: uppercase;
+    }
+    .title::before{
+content: '';
+background:#7b1798;
+height: 5px;
+width: 200px;
+margin-left:auto;
+margin-right: auto;
+display: block;
+transform: translateY(63px);
+    }
+
+ .title::after{
+content: '';
+background:#7b1798;
+height: 10px;
+width: 50px;
+margin-left:auto;
+margin-right: auto;
+margin-bottom: 40px;
+display: block;
+transform: translateY(8px);
+    }
+
+    #services .btn-primary{
+
+    	box-shadow: none;
+    	padding: 8px 25px;
+    	border: none;
+    	border-radius: 20px;
+    	background-image: linear-gradient(to right, #a517ba,#5f1782);
+    }
+
+    #about-us{
+
+    	background: #f8f9fa;
+    	padding-bottom: 50px;
+    	padding-top: 50px;
+    }
+    .at{
+    	font-size: 40px;
+    	font-weight: 600;
+    	margin-top: 8%;
+    }
+
+    #about-us ul li{
+
+    	margin:10px 0;
+    }
+
+    #about-us ul{
+
+    	margin-left:20px;
+    }
+
+    #testimonials{
+
+    	margin: 100px 0;
+    }
+    .testimonials{
+
+    	border-left: 4px solid #7b1798;
+    	margin-top: 50px;
+    	margin-bottom: 50px;
+
+    }
+    .testimonials img{
+
+    	height: 60px;
+    	width: 60px;
+    	border-radius: 50px;
+    	margin: 0 10px;
+    }
+    .ud{
+
+    	display: inline-block;
+    	font-size: 12px;
+
+    }
+    #smedia{
+
+    	background: #f8f9fa;
+    	padding: 100px 0;
+    }
+    #smedia p{
+    	font-size: 36px;
+    	font-weight: 600;
+    	margin-bottom: 30px;
+    }
+    .sicons img{
+
+    	width: 50px;
+    	transition: 0.5s;
+
+    }
+    .sicons a:hover img{
+    	transform: translateY(-10px);
+    }
+    #footer{
+    	background-image: linear-gradient(to right, #a517ba,#5f1782);
+    	color: #fff;
+    }
+    .fbox{
+
+    	padding: 20px;
+    }
+
+    .fbox img{
+
+    	width: 120px;
+    	margin-bottom: 20px;
+    }
+    .fbox .fa{
+
+    	margin-right: 8px;
+    	font-size: 25px;
+    	height: 40px;
+    	width: 40px;
+    	text-align: center;
+    	padding-top: 7px;
+    	border-radius: 2px;
+    		background-image: linear-gradient(to right, #a517ba,#5f1782);
+
+    }
+    .fbox .formc{
+
+    	box-shadow: none!important;
+    	border:none;
+    	border-radius: 0;
+    	margin-top: 25px;
+    	max-width: 250px;
+    }
+    .fbox .btn-pr-primary{
+
+    	box-shadow: none!important;
+    	border:none;
+    	border-radius: 0;
+    	margin-top: 30px;
+    		background-image: linear-gradient(to right, #a517ba,#5f1782);
+
+    }
+    hr{
+    	background-color: #fff;
+
+    }
+    .copyright{
+
+    	margin-bottom: 0;
+    	padding-bottom: 20px;
+    	text-align: center;
+    }
+  </style>
+
+</head>
+<body>
+	
+	<section id="nav-bar">
+		<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="#">Skweb</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+   <i class="fa fa-bars"></i>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#top">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#services">Service</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#about-us">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#testimonials">Testimonials</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#footer">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</section>
+
+		<section id="banner">
+		<div class="container">
+		<div class="row">
+		<div class="col-md-6">
+		<p class="pt">Skweb Technology</p>	
+		<p>We are work on Web development,HTML,CSS,Desiging.</p>
+		</div>
+		<div class="col-md-6 text-center mb-4">
+		<img src="skweb1.jpg" class="img-fluid" style="height:275px;width: 500px;border-radius: 40px;">	
+		</div>	
+		</div>	
+		</div>
+
+		<img src="" class="bimg">
+		</section>
+
+		<section id="services">
+			<div class="container text-center">
+				<h1 class="title">WHAT WE DO?</h1>
+				<div class="row text-center">
+					<div class="col-md-4 services">
+						<img src="31.jpg" class="simg mb-2">
+						<h4>Web Development</h4>
+						<p>The Paragraphs module allows content creators to choose which kinds of paragraphs they want to place on the page, and the order in which they want to place them. They can do all of this through the familiar node edit screen.</p>
+					</div>
+				
+					<div class="col-md-4 services">
+						<img src="29.jpg" class="simg mb-2">
+						<h4>HTML</h4>
+						<p>The Paragraphs module allows content creators to choose which kinds of paragraphs they want to place on the page, and the order in which they want to place them. They can do all of this through the familiar node edit screen.</p>
+					</div>
+
+					<div class="col-md-4 services">
+						<img src="32.jpg" class="simg mb-2">
+						<h4>CSS</h4>
+						<p>The Paragraphs module allows content creators to choose which kinds of paragraphs they want to place on the page, and the order in which they want to place them. They can do all of this through the familiar node edit screen.</p>
+					</div>
+				</div>
+
+				<button type="button" class="btn-primary">All Services</button>
+			</div>
+		</section>
+
+
+		<section id="about-us">
+			<div class="container">
+				<h1 class="title text-center">WHY CHOOSE US?</h1>
+			<div class="row">
+				<div class="col-md-6 about-us">
+					<p class="at">Why we are different</p>
+					<ul>
+						<li>Belive in doing business with honesty</li>
+						<li>Belive in doing business with honesty</li>
+						<li>Belive in doing business with honesty</li>
+						<li>Belive in doing business with honesty</li>
+						<li>Belive in doing business with honesty</li>
+						<li>Belive in doing business with honesty</li>
+						<li>Belive in doing business with honesty</li>
+
+					</ul>
+				</div>
+
+				<div class="col-md-6">
+					<img src="29.jpg" class="img-fluid" style="height: 350px;padding-top:60px;">
+			</div>
+			</div>
+			
+		</section>
+	
+
+	<section id="testimonials">
+		<div class="container">
+			<h1 class="title text-center">WHAT CLIENT SAY</h1>
+			<div class="row offset-1">
+				<div class="col-md-6 testimonials">
+					<p>
+						The Paragraphs module allows content creators to choose which kinds of paragraphs they want to place on the page, and the order in which they want to place them. </p>
+						<img src="skweb1.jpg">
+						<p class="ud"><b>Skweb</b><br>Co-founder at Skweb</p>
+				</div>
+
+				<div class="col-md-6 testimonials">
+					<p>
+						The Paragraphs module allows content creators to choose which kinds of paragraphs they want to place on the page, and the order in which they want to place them. </p>
+						<img src="skweb1.jpg">
+						<p class="ud"><b>SkyWeb</b><br>Director at SkyWeb</p>
+				</div>
+			</div>
+		</div>
+		
+
+	</section>
+
+	<section id="smedia">
+		<div class="container text-center">
+			<p>FIND US ON SOCIAL MEDIA</p>
+		<div class="sicons">
+			<a href="#"><img src="facebook.png" style="height:40px;width: 40px;padding: 2px;"></a>
+			<a href="#"><img src="instagram.png" style="height:40px;width: 40px;padding: 2px;"></a>
+			<a href="#"><img src="whatsapp.png" style="height:40px;width: 40px;padding: 2px;"></a>
+			<a href="#"><img src="twitter.png" style="height:40px;width: 40px;padding: 2px;"></a>
+			<a href="#"><img src="youtube.png" style="height:40px;width: 40px;padding: 2px;"></a>
+			<a href="#"><img src="google.png" style="height:40px;width: 40px; padding: 2px;"></a>
+		</div>
+		</div>
+	</section>
+
+	<section id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 fbox">
+					<img src="skweb1.jpg">
+					<p>The Paragraphs module allows content creators to choose which kinds of paragraphs they want to place on the page, and the order in which they want to place them. They can do all of this through the familiar node edit screen.</p>
+				</div>
+
+				<div class="col-md-4 fbox">
+					<p><b>CONTACT US</b></p>
+					<p style="padding-top: 26px;"><i class="fa fa-map-marker"></i>Ahmedabad, India</p>
+					<p><i class="fa fa-phone"></i>+91 123456789</p>
+					<p><i class="fa fa-envelope-o"></i>skwebtechnology@gmail.com</p>
+				</div>
+
+					<div class="col-md-4 fbox">
+					<p><b>SUBSCRIBE NEWSLETTER</b></p>
+					<input type="email" class="formc" placeholder="Your Email@gmail.com"  style="border-radius: 2px;padding: 2px;width: 400px;">
+					<br>
+					<button type="button" class="btn-pr-primary" style="border-radius: 2px;padding: 4px;">Subscribe</button>
+				</div>
+			</div>
+
+			<hr>
+			<p class="copyright">Website crfted by SkWebTechnology</p>
+		</div>
+
+
+	</section>
+
+	<script src="smooth-scroll"></script>
+	<script>
+	var scroll = new SmoothScroll('a[href*="#"]');
+</script>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
